@@ -15,3 +15,21 @@
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
+
+/node_modules
+
+###> Docker
+.docker/data/db/*
+/db
+/logs
+docker-compose.override.yml
+###> Docker
+
+###> phpunit/phpunit ###
+/phpunit.xml
+###< phpunit/phpunit ###
+
+###> IDE ###
+.idea/*
+###< IDE ###
+
