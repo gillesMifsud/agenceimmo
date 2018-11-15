@@ -22,6 +22,8 @@ services:
             MYSQL_DATABASE: sf4
             MYSQL_USER: sf4
             MYSQL_PASSWORD: sf4
+        ports:
+          - "6665:3306"
 
     php:
         build: .docker/php
