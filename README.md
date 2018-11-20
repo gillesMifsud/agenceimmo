@@ -10,6 +10,6 @@ cd /home/wwwroot/sf4
 
 composer install
 
-php bin/console doctrine:schema:update --force --full-database
+php bin/console doctrine:schema:update --force
 
 
