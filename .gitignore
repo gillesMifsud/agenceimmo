@@ -19,6 +19,7 @@
 /node_modules
 
 ###> Docker
+.docker/data/db/*
 /db
 /logs
 docker-compose.override.yml
