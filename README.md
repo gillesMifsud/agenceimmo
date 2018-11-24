@@ -10,9 +10,13 @@ cd /home/wwwroot/sf4
 
 composer install
 
-php bin/console doctrine:migrations:status --show-versions
-php bin/console doctrine:migrations:migrate --version
-
+php bin/console doctrine:database:drop --force
+php bin/console doctrine:database:create               
 php bin/console doctrine:schema:update --force
+
+php bin/console doctrine:migrations:status --show-versions
+php bin/console doctrine:migrations:migrate --version xxx
+
+
 
 

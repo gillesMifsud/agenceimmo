@@ -22,9 +22,10 @@ class PropertyController extends AbstractController {
 
     /**
      * @Route("/biens", name="property.index")
+     * @param PropertyRepository $repository
      * @return Response
      */
-    public function index(): Response
+    public function index(PropertyRepository $repository): Response
     {
 //        $property = new Property();
 //        $property->setTitle('Mon premier bien')
@@ -45,13 +46,17 @@ class PropertyController extends AbstractController {
 //        $property = $this->repository->findAllVisible();
 //        dump($property);
 
-        return $this->render('pages/property/index.html.twig', [
-            'current_menu' => 'properties'
+        $properties = $repository->findAllVisible();
+        return $this->render('property/index.html.twig', [
+            'current_menu' => 'properties',
+            'properties' => $properties
         ]);
     }
 
     /**
      * @Route("/biens/{slug}-{id}", name="property.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @param Property $property
+     * @param string $slug
      * @return Response
      */
     public function show(Property $property, string $slug): Response

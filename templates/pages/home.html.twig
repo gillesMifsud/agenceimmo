@@ -4,28 +4,15 @@
     <div class="jumbotron text-center">
         <div class="container">
             <h1>Bienvenue sur l'agence</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, ex excepturi explicabo facere fuga impedit ipsum laudantium nemo, optio perspiciatis quas repudiandae sapiente veniam. Consequuntur dolor nemo odit quaerat tempora.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, ex excepturi explicabo facere fuga
+                impedit ipsum laudantium nemo, optio perspiciatis quas repudiandae sapiente veniam. Consequuntur dolor
+                nemo odit quaerat tempora.</p>
         </div>
         <div class="container">
             <div class="row flex">
                 {% for property in properties %}
                     <div class="col-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="{{ path('property.show',
-                                        {id: property.id, slug: property.slug}) }}">
-                                        {{ property.title }}
-                                    </a>
-                                </h5>
-                                <p class="card-text">
-                                    {{ property.city }} {{ property.postalCode }}
-                                </p>
-                                <div class="text-primary">
-                                    {{ property.formattedPrice }} €
-                                </div>
-                            </div>
-                        </div>
+                        {% include 'property/_property.html.twig' %}
                     </div>
                 {% endfor %}
             </div>
