@@ -11,7 +11,7 @@ cd /home/wwwroot/sf4
 composer install
 
 php bin/console doctrine:database:drop --force
-php bin/console doctrine:database:create               
+php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
 
 #Autowiring : injecter dynamiquement -> php bin/console debug:autowiring
