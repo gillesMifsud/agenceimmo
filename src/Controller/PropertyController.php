@@ -55,7 +55,7 @@ class PropertyController extends AbstractController {
         $form->handleRequest($request);
 
         $properties = $paginatior->paginate(
-            $this->repository->findAllVisibleQuery(),
+            $this->repository->findAllVisibleQuery($search),
             $request->query->getInt('page', 1),
             12
         );

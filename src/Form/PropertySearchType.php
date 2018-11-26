@@ -38,4 +38,13 @@ class PropertySearchType extends AbstractType
             'csrf_protection' => false
         ]);
     }
+
+    /**
+     * For better url search params
+     * @return null|string
+     */
+    public function getBlockPrefix()
+    {
+        return '';
+    }
 }
