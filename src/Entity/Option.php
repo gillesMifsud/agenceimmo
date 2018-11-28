@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OptionRepository")
+ * @ORM\Table(name="`option`")
  */
 class Option
 {
@@ -24,7 +25,7 @@ class Option
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Property", inversedBy="options")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Property", mappedBy="options")
      */
     private $properties;
 
