@@ -16,7 +16,6 @@ php bin/console doctrine:schema:update --force
 php bin/console d:f:l
 
 #Autowiring : injecter dynamiquement -> php bin/console debug:autowiring
-
 php bin/console doctrine:migrations:status --show-versions
 php bin/console doctrine:migrations:migrate --version xxx
 
