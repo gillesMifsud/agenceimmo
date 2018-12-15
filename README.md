@@ -22,7 +22,3 @@ php bin/console doctrine:migrations:migrate --version xxx
 #After changing / creating Entity (make:entity)
 php bin/console make:migration
 php bin/console doctrine:migrations:migrate
-
-#Emails
-docker pull djfarrelly/maildev
-docker run -p 1080:80 -p 1025:25 djfarrelly/maildev
