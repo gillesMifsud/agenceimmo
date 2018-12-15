@@ -5,6 +5,7 @@
 /public/bundles/
 /var/
 /vendor/
+/public/images
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
@@ -39,3 +40,6 @@ docker-compose.override.yml
 ###> liip/imagine-bundle ###
 /public/media/cache/
 ###< liip/imagine-bundle ###
+
+.DS_Store
+public/.DS_Store
